@@ -1,32 +1,13 @@
-variable "cidr_block" {
-    description = "Please provide a CIDR block to build a VPC"
-    type = string
-    default = "10.0.0.0/16"
-}
-variable "tags" {
-    description = "Please provide a TAG to build a VPC"
+variable "cidr_block"{}
+
+variable "tags"{
     type = map
-    default = {
-        Name = "Dev"
-    }
 }
 
 variable "private_subnets_cidr" {
-    description = "Please provide a CIDR block for a private subnets to build a VPC"
     type = list
-    default = {
-        "10.0.1.0/24"
-        "10.0.2.0/24"
-        "10.0.3.0/24"
-    }
 }
 
 variable "public_subnets_cidr" {
-    description = "Please provide a CIDR block for a public subnets to build a VPC"
     type = list
-    default = {
-        "10.0.4.0/24"
-        "10.0.5.0/24"
-        "10.0.6.0/24"
-    }
 }
