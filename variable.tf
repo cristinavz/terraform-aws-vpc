@@ -20,3 +20,13 @@ variable "private_subnets_cidr" {
         "10.0.3.0/24"
     }
 }
+
+variable "public_subnets_cidr" {
+    description = "Please provide a CIDR block for a public subnets to build a VPC"
+    type = list
+    default = {
+        "10.0.4.0/24"
+        "10.0.5.0/24"
+        "10.0.6.0/24"
+    }
+}
